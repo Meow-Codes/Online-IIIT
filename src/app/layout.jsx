@@ -1,0 +1,45 @@
+import { Roboto } from "next/font/google";
+import "./globals.css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import Script from 'next/script';
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
+export const metadata = {
+  title: "IIIT Dharwad",
+  description: "IIIT Dharwad offers B.Tech degree program in Computer Science and Engineering, Electronics and Communication Engineering, and Data Science and Artificial Intelligence, along with M.Tech (Research) and Ph.D. degree program.",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="16x16" />
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KGGSHP6H');
+          `}
+        </Script>
+      </head>
+      <body className={`${roboto.variable} antialiased`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KGGSHP6H"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {children}</body>
+    </html>
+  );
+}
