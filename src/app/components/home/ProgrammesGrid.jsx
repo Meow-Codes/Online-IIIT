@@ -16,7 +16,7 @@ const programmes = [
   {
     title: "Online M.Tech in DSAI",
     description: "Gain practical knowledge in Data Science and Artificial Intelligence.",
-    href: "https://online.iiitdwd.ac.in",
+    href: "https://online.iiitdwd.ac.in/dsai",
     accent: "from-[#90ffef]/60 to-transparent",
     badge: "border-[#90ffef]/50 bg-[#90ffef]/10 text-[#90ffef]",
     button:
@@ -54,6 +54,8 @@ export default function ProgrammesGrid() {
                   <Link
                     className={`inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-semibold shadow-[0_15px_40px_rgba(0,0,0,0.35)] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${programme.button}`}
                     href={programme.href}
+                    target={programme.href && programme.href.startsWith('http') ? '_blank' : undefined}
+                    rel={programme.href && programme.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
                     View Programme
                   </Link>
