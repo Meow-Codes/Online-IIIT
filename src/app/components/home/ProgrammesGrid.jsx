@@ -7,7 +7,7 @@ const programmes = [
   {
     title: "Online M.Tech in CSE",
     description: "Build advanced expertise in computer science and engineering.",
-    href: "https://online.iiitdwd.ac.in/cse",
+    href: "https://onlinecse.iiitdwd.ac.in",
     accent: "from-[#1b91ff]/50 to-transparent",
     badge: "border-white/30 bg-white/10 text-white",
     button: "bg-white text-[#041b39] hover:bg-white/90 hover:text-[#031630] focus-visible:ring-white/60",
